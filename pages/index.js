@@ -35,15 +35,15 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>productAIze</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Got a question? Any question? Shoot it here.</h1>
+            <h1>Prepare product documents atleast 10x faster</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Ask any question, and we'll explain it to you twice, first giving a concise explanation and then using a metaphor to better help you grasp it.</h2>
+            <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your <strong>Product Requirement Document</strong> in seconds.</h2>
           </div>
         </div>
         {/* added code here */}
@@ -53,7 +53,7 @@ const Home = () => {
           placeholder="start typing here"
           value={userInput}
           onChange={onUserChangedText}
-        />;
+        />
         <div className="prompt-buttons">
           <a
             className={isGenerating ? 'generate-button loading' : 'generate-button'}
@@ -80,13 +80,13 @@ const Home = () => {
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="https://twitter.com/ch_venkatakshay"
           target="_blank"
           rel="noreferrer"
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            <p>built by akshay</p>
           </div>
         </a>
       </div>

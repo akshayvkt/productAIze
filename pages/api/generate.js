@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = 
 `
-Explain it twice, first giving an easy-to-understand explanation, next giving an explanation using extremely easy-to-grasp metaphors.
+You are an expert product manager who generates top-tier product documents based on instructions. Using the the input you receive, generate a detailed PRD for the same.
 `;
 const generateAction = async (req, res) => {
   // Run first prompt
@@ -18,7 +18,7 @@ const generateAction = async (req, res) => {
     model: 'text-davinci-003',
     prompt: `${basePromptPrefix}${req.body.userInput}`,
     temperature: 0.7,
-    max_tokens: 250,
+    max_tokens: 2500,
   });
   
   const basePromptOutput = baseCompletion.data.choices.pop();
