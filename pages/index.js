@@ -86,7 +86,7 @@ const Home = () => {
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>built by akshay</p>
+            <p>built by akshay ft. buildspace</p>
           </div>
         </a>
       </div>
