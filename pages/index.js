@@ -40,10 +40,26 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Prepare product documents atleast 10x faster</h1>
+            <h1>Prepare product documents 10-100x faster</h1>
           </div>
           <div className="header-subtitle">
             <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your <strong>Product Requirement Document</strong> in seconds.</h2>
+            <div className="header-examples">
+            <strong>Example input responses:</strong>
+            <ol>
+              <li>I'm planning to build a product which would act as a personal assistant for you. 
+                This will be powered by AI, and would make reservations for you, handle your emails and texts with your oversight, 
+                multiply your productivity by helping you with knowledge work, and learn from your feedback in various ways. 
+                This will be powered by state of the art LLMs and use a combination of natural language processing and 
+                speech recognition.</li>
+              <p></p>
+              <li>Invez will be an app-based product which will democratize investing, providing access to opportunities that have so far only been available to high net worth people.
+                Invez will be an online marketplace for investors and seasoned traders, where investors can select from a pool of traders based on their
+                performance history, their subject matter expertise and their risk profile. Based on the upside that the investor gains from the trader's picks, the trader will
+                get a small cut of their profits.
+              </li>
+              </ol>
+            </div>
           </div>
         </div>
         {/* added code here */}

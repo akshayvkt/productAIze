@@ -66,6 +66,14 @@ body {
     color: rgba(0, 0, 0, 0.75);
 }
 
+.header-examples h3 {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4em;
+    color: rgba(0, 0, 0, 0.75);
+}
+
 .prompt-container {
     place-content: flex-end center;
     align-items: center;
