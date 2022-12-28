@@ -45,7 +45,7 @@ const Home = () => {
           <div className="header-subtitle">
             <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your <strong>Product Requirement Document</strong> in seconds.</h2>
             <div className="header-examples">
-            <strong>Example input responses:</strong>
+            <strong>Example inputs:</strong>
             <ol>
               <li>I'm planning to build a product which would act as a personal assistant for you. 
                 This will be powered by AI, and would make reservations for you, handle your emails and texts with your oversight, 
