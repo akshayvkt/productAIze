@@ -8,16 +8,18 @@ const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = 
 `
-You are an expert product manager who generates top-tier product documents based on instructions. Using the the input you receive, generate a detailed PRD for the same.
+You are an expert product manager who generates top-tier product documents based on instructions.
 `;
+
+
 const generateAction = async (req, res) => {
   // Run first prompt
-  console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
+  console.log(`API: ${basePromptPrefix}${req.body.userInput}\n Generate a detailed ${req.body.docType} for the above.`)
 
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt: `${basePromptPrefix}${req.body.userInput}`,
-    temperature: 0.7,
+    temperature: 0.5,
     max_tokens: 2500,
   });
   

@@ -5,9 +5,14 @@ import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
+  const [docType, setDocType] = useState('');
 
   const [apiOutput, setApiOutput] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
+
+  const onDocTypeChanged = (event) => {
+    setDocType(event.target.value);
+  }
   
   const callGenerateEndpoint = async () => {
     setIsGenerating(true);
@@ -18,7 +23,7 @@ const Home = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ userInput }),
+      body: JSON.stringify({ userInput, docType }),
     });
   
     const data = await response.json();
@@ -44,21 +49,15 @@ const Home = () => {
           </div>
           <div className="header-subtitle">
             <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your <strong>Product Requirement Document</strong> in seconds.</h2>
-            <div className="header-examples">
-            <strong>Example inputs:</strong>
-            <ol>
-              <li>I'm planning to build a product which would act as a personal assistant for you. 
-                This will be powered by AI, and would make reservations for you, handle your emails and texts with your oversight, 
-                multiply your productivity by helping you with knowledge work, and learn from your feedback in various ways. 
-                This will be powered by state of the art LLMs and use a combination of natural language processing and 
-                speech recognition.</li>
-              <p></p>
-              <li>Invez will be an app-based product which will democratize investing, providing access to opportunities that have so far only been available to high net worth people.
-                Invez will be an online marketplace for investors and seasoned traders, where investors can select from a pool of traders based on their
-                performance history, their subject matter expertise and their risk profile. Based on the upside that the investor gains from the trader's picks, the trader will
-                get a small cut of their profits.
-              </li>
-              </ol>
+            <div className='doc-type'>
+              <p> Choose a document type</p>
+              <select id='doc-type-select' onChange = {onDocTypeChanged}>
+                <option value="PRD">PRD</option>
+                <option value="PR/FAQ">PR/FAQ</option>
+                <option value="Jira ticket">Jira ticket</option>
+                <option value="implementation plan">implementation plan</option>
+                <option value='blank'></option>
+              </select>
             </div>
           </div>
         </div>
@@ -94,6 +93,22 @@ const Home = () => {
       )}
       </div>
       </div>
+      <div className="header-examples">
+          <strong>Example inputs:</strong>
+            <ol>
+              <li>I'm planning to build a product which would act as a personal assistant for you. 
+                This will be powered by AI, and would make reservations for you, handle your emails and texts with your oversight, 
+                multiply your productivity by helping you with knowledge work, and learn from your feedback in various ways. 
+                This will be powered by state of the art LLMs and use a combination of natural language processing and 
+                speech recognition.</li>
+              <p></p>
+              <li>Invez will be an app-based product which will democratize investing, providing access to opportunities that have so far only been available to high net worth people.
+                Invez will be an online marketplace for investors and seasoned traders, where investors can select from a pool of traders based on their
+                performance history, their subject matter expertise and their risk profile. Based on the upside that the investor gains from the trader's picks, the trader will
+                get a small cut of their profits.
+              </li>
+              </ol>
+        </div>
       <div className="badge-container grow">
         <a
           href="https://twitter.com/ch_venkatakshay"
