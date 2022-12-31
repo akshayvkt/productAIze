@@ -48,7 +48,7 @@ const Home = () => {
             <h1>Prepare product documents 10-100x faster</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your <strong>Product Requirement Document</strong> in seconds.</h2>
+            <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your<strong>product document</strong> in seconds.</h2>
             <div className='doc-type'>
               <p> Choose a document type</p>
               <select id='doc-type-select' onChange = {onDocTypeChanged}>
