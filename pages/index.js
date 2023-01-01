@@ -5,11 +5,12 @@ import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
+  //In the index.js file, add an additional state variable to store the selected value of the dropdown menu. You can do this using the useState hook
   const [docType, setDocType] = useState('');
-
   const [apiOutput, setApiOutput] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
 
+  // Modify the onChange handler for the dropdown menu to update the docType state variable with the selected value:
   const onDocTypeChanged = (event) => {
     setDocType(event.target.value);
   }
@@ -48,14 +49,15 @@ const Home = () => {
             <h1>Prepare product documents 10-100x faster</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Give a 2-3 sentence description of your product and watch as we prepare a first draft of your<strong>product document</strong> in seconds.</h2>
+            <h2>Give a 2-3 sentence description of your product/idea and watch as we prepare a first draft of your product document in seconds.</h2>
             <div className='doc-type'>
               <p> Choose a document type</p>
+              {/* Bind the onChange handler to the dropdown menu */}
               <select id='doc-type-select' onChange = {onDocTypeChanged}>
                 <option value="PRD">PRD</option>
                 <option value="PR/FAQ">PR/FAQ</option>
-                <option value="Jira ticket">Jira ticket</option>
-                <option value="implementation plan">implementation plan</option>
+                <option value="Jira ticket">Jira tickets</option>
+                <option value="Implementation plan">Implementation plan</option>
                 <option value='blank'></option>
               </select>
             </div>

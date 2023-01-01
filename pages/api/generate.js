@@ -14,7 +14,7 @@ You are an expert product manager who generates top-tier product documents based
 
 const generateAction = async (req, res) => {
   // Run first prompt
-  console.log(`API: ${basePromptPrefix}${req.body.userInput}. \n Based on the above description, generate a detailed ${req.body.docType} for the same.`)
+  console.log(`API: ${basePromptPrefix}${req.body.userInput}. \n Write me ${req.body.docType}.`)
 
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
