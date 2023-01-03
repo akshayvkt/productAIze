@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
+import productaizeLogo from '../assets/productAIze.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
@@ -43,7 +44,10 @@ const Home = () => {
       <Head>
         <title>productAIze</title>
       </Head>
-      <div className="container">
+      <div className='logo-container'>
+      <Image src={productaizeLogo} alt="productAIze logo" />
+      </div>
+      <div className="container">        
         <div className="header">
           <div className="header-title">
             <h1>Prepare product documents 10-100x faster</h1>
@@ -54,9 +58,9 @@ const Home = () => {
               <p> Choose a document type</p>
               {/* Bind the onChange handler to the dropdown menu */}
               <select id='doc-type-select' onChange = {onDocTypeChanged}>
-                <option value="PRD">PRD</option>
+                <option value="Products Requirement Document">PRD</option>
                 <option value="PR/FAQ">PR/FAQ</option>
-                <option value="Jira ticket">Jira tickets</option>
+                <option value="Jira ticket(s)">Jira tickets</option>
                 <option value="Implementation plan">Implementation plan</option>
                 <option value='blank'></option>
               </select>
