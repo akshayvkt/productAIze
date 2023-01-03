@@ -70,9 +70,10 @@ const Home = () => {
               <select id='doc-type-select' onChange = {onDocTypeChanged}>
                 <option value="a Products Requirement Document">PRD</option>
                 <option value="a detailed PR/FAQ">PR/FAQ</option>
-                <option value="all required Jira ticket(s)">Jira tickets</option>
+                <option value="all relevant Jira ticket(s)">Jira tickets</option>
                 <option value="an Implementation plan">Implementation plan</option>
                 <option value="all the required software and skills for the product/idea">Software and skills required</option>
+                <option value='summarize this as an email to relevant stakeholers'>email summary of generation</option>
               </select>
             </div>
           </div>
@@ -124,8 +125,8 @@ const Home = () => {
               <li>I'm building a startup which will let anyone who's interested in AI and crypto sign up for free and build useful products that directly relate
                 to these domains, while helping them learn by doing. These self-guided product building sessions will be called builds; they'll be technical and 
                 take about a weekend's worth of time. A sense of community will be core to this startup's users. The startup will be called buildspace.
-
               </li>
+              <p></p>
               <li>I'm planning to build a product which would act as a personal assistant for you. 
                 This will be powered by AI, and would make reservations for you, handle your emails and texts with your oversight, 
                 multiply your productivity by helping you with knowledge work, and learn from your feedback in various ways. 
