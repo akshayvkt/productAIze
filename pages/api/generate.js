@@ -20,7 +20,7 @@ const generateAction = async (req, res) => {
     model: 'text-davinci-003',
     prompt: 
     `
-    ${basePromptPrefix}${req.body.userInput}. \n Write me ${req.body.docType} based on the above description, with emphasis on extreme detail.
+    ${basePromptPrefix}${req.body.userInput}. \n Write me ${req.body.docType} based on the above description, with emphasis on the required amount of detail.
     `,
     temperature: 0.5,
     max_tokens: 2500,
