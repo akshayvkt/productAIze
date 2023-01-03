@@ -10,6 +10,7 @@ const Home = () => {
   const [docType, setDocType] = useState('');
   const [apiOutput, setApiOutput] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
+  const [textCopied, setTextCopied] = useState(false);
 
   // Modify the onChange handler for the dropdown menu to update the docType state variable with the selected value:
   const onDocTypeChanged = (event) => {
@@ -39,6 +40,15 @@ const Home = () => {
   const onUserChangedText = (event) => {
     setUserInput(event.target.value);
   };
+
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (error) {
+      console.error('Failed to copy: ', error);
+    }
+  }
+
   return (
     <div className="root">
       <Head>
@@ -47,15 +57,15 @@ const Home = () => {
       <div className='logo-container'>
       <Image src={productaizeLogo} alt="productAIze logo" />
       </div>
-      <div className="container">        
+      <div className="container">    
         <div className="header">
           <div className="header-title">
             <h1>Prepare product documents 10-100x faster</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Give a 2-3 sentence description of your product/idea and watch as we prepare a first draft of your product document in seconds.</h2>
+            <h2>Give a 2-3 sentence description of your product/idea and watch as we prepare a first draft of your product document in seconds. <a href="/header-examples">Some examples here</a></h2>
             <div className='doc-type'>
-              <p> Choose a document type</p>
+              <h4> Choose a document type</h4>
               {/* Bind the onChange handler to the dropdown menu */}
               <select id='doc-type-select' onChange = {onDocTypeChanged}>
                 <option value="Products Requirement Document">PRD</option>
@@ -84,6 +94,15 @@ const Home = () => {
             {isGenerating ? <span class="loader"></span> : <p>Generate</p>}
             </div>
           </a>
+          <div className='copy-button'>
+          <a onClick={() => {
+            copyToClipboard(apiOutput);
+            setTextCopied(true);
+            setTimeout(() => {
+              setTextCopied(false);
+            }, 2000); // 2000 milliseconds = 2 seconds
+          }}>{textCopied ? 'Copied!' : 'Copy Output'}</a>
+          </div>
         </div>
         {apiOutput && (
         <div className="output">

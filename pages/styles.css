@@ -59,7 +59,6 @@ body {
     font-family: sans-serif;
     /* appearance: none ; */
     padding: 10px;
-    width: 30%;
   }
   
 #doc-type-select:focus {
@@ -80,7 +79,6 @@ body {
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
-    margin: 
 }
 
 .header-subtitle h2 {
@@ -121,7 +119,7 @@ body {
     border-top-width: 1px;
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     border-radius: 16px;
     display: flex;
     flex: 0 0 auto;
@@ -206,7 +204,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: rgb(12, 1, 1);
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -220,6 +218,27 @@ textarea {
     width: min-content;
     will-change: transform;
     cursor: pointer;
+}
+
+.copy-button {
+    place-content: flex-start;
+    align-items: flex-start;
+    color:rgb(0, 3, 7);
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    gap: 10px;
+    height: min-content;
+    overflow: hidden;
+    padding: 16px 24px;
+    position: relative;
+    text-decoration: none;
+    width: max-content;
+    will-change: transform;
+    cursor: pointer;
+
 }
 
 .generate {
