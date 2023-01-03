@@ -63,16 +63,16 @@ const Home = () => {
             <h1>Prepare product documents 10-100x faster</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Give a 2-3 sentence description of your product/idea and watch as we prepare a first draft of your product document in seconds. <a href="/header-examples">Some examples here</a></h2>
+            <h2>Give a 2-3 sentence description of your product/idea and watch as we prepare a first draft of your product document in seconds. <a href='#header-examples'>Example inputs</a></h2>            
             <div className='doc-type'>
               <h4> Choose a document type</h4>
               {/* Bind the onChange handler to the dropdown menu */}
               <select id='doc-type-select' onChange = {onDocTypeChanged}>
-                <option value="Products Requirement Document">PRD</option>
-                <option value="PR/FAQ">PR/FAQ</option>
-                <option value="Jira ticket(s)">Jira tickets</option>
-                <option value="Implementation plan">Implementation plan</option>
-                <option value='blank'></option>
+                <option value="a Products Requirement Document">PRD</option>
+                <option value="a detailed PR/FAQ">PR/FAQ</option>
+                <option value="all required Jira ticket(s)">Jira tickets</option>
+                <option value="an Implementation plan">Implementation plan</option>
+                <option value="all the required software and skills for the product/idea">Software and skills required</option>
               </select>
             </div>
           </div>
@@ -118,9 +118,14 @@ const Home = () => {
       )}
       </div>
       </div>
-      <div className="header-examples">
+      <div id='header-examples' className="header-examples">
           <strong>Example inputs:</strong>
             <ol>
+              <li>I'm building a startup which will let anyone who's interested in AI and crypto sign up for free and build useful products that directly relate
+                to these domains, while helping them learn by doing. These self-guided product building sessions will be called builds; they'll be technical and 
+                take about a weekend's worth of time. A sense of community will be core to this startup's users. The startup will be called buildspace.
+
+              </li>
               <li>I'm planning to build a product which would act as a personal assistant for you. 
                 This will be powered by AI, and would make reservations for you, handle your emails and texts with your oversight, 
                 multiply your productivity by helping you with knowledge work, and learn from your feedback in various ways. 
