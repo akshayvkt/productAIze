@@ -61,6 +61,7 @@ const Home = () => {
         <div className="header">
           <div className="header-title">
             <h1>Prepare product documents 10-100x faster</h1>
+            {/* next to-do: have the gradient only for '10-100x faster' */}
           </div>
           <div className="header-subtitle">
             <h2>Give a 2-3 sentence description of your product/idea and watch as we prepare a first draft of your product document in seconds. <a href='#header-examples'>Example inputs</a></h2>            
