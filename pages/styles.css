@@ -79,25 +79,13 @@ body {
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
-    background: linear-gradient(to right, #0b1317,
-    #1f3b49, #387690, #054e68);
+  }
+ 
+.header-title h1 span.gradient-text {
+    background: linear-gradient(to right, #d90e3d, #e21385, #f905d8);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-  }
-
-  .header-title span {
-    width: 100%;
-    font-weight: 700;
-    font-size: 72px;
-    letter-spacing: -4px;
-    line-height: 1.2em;
-    text-align: center;
-    background: linear-gradient(to right, #0b1317,
-    #1f3b49, #387690, #054e68);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-  
+}
 
 .header-subtitle h2 {
     font-size: 20px;

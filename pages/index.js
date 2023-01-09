@@ -9,6 +9,7 @@ const Home = () => {
   //In the index.js file, add an additional state variable to store the selected value of the dropdown menu. You can do this using the useState hook
   const [docType, setDocType] = useState('');
   const [apiOutput, setApiOutput] = useState('')
+
   const [isGenerating, setIsGenerating] = useState(false)
   const [textCopied, setTextCopied] = useState(false);
 
@@ -60,7 +61,8 @@ const Home = () => {
       <div className="container">    
         <div className="header">
           <div className="header-title">
-            <h1>Prepare product documents 10-100x faster</h1>
+            <h1>Prepare product documents <span className='gradient-text'>10-100x faster</span></h1>
+
             {/* next to-do: have the gradient only for '10-100x faster' */}
           </div>
           <div className="header-subtitle">
