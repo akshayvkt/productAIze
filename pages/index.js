@@ -31,7 +31,7 @@ const Home = () => {
     });
   
     const data = await response.json();
-    const { baseOutput, output } = data;
+    const { output } = data;
     console.log("OpenAI replied...", output.text)
   
     setApiOutput(`${output.text}`);
@@ -97,15 +97,7 @@ const Home = () => {
             {isGenerating ? <span class="loader"></span> : <p>Generate</p>}
             </div>
           </a>
-          <div className='copy-button'>
-          <a onClick={() => {
-            copyToClipboard(apiOutput);
-            setTextCopied(true);
-            setTimeout(() => {
-              setTextCopied(false);
-            }, 2000); // 2000 milliseconds = 2 seconds
-          }}>{textCopied ? 'Copied!' : 'Copy Output'}</a>
-          </div>
+         
         </div>
         {apiOutput && (
         <div className="output">
@@ -114,7 +106,18 @@ const Home = () => {
               <h3>Output</h3>
             </div>
           </div>
+          
           <div className="output-content">
+          <div className='copy-button'>
+            {/* added copy button at top of output */}
+          <strong><a onClick={() => {
+            copyToClipboard(apiOutput);
+            setTextCopied(true);
+            setTimeout(() => {
+              setTextCopied(false);
+            }, 2000); // 2000 milliseconds = 2 seconds
+          }}>{textCopied ? 'Copied!' : 'Copy Output'}</a></strong>
+          </div>
             <p>{apiOutput}</p>
           </div>
         </div>
