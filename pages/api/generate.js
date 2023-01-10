@@ -80,7 +80,9 @@ export default generateAction;
 //   const secondPromptOutput = secondPromptCompletion.data.choices.pop();
 
 //   // Send over the Prompt #2's output to our UI instead of Prompt #1's.
-//   res.status(200).json({ output: secondPromptOutput });
+//   res.status(200).json({ 
+//     baseOutput: basePromptOutput,
+//     secondOutput: secondPromptOutput });
 // };
 
 // export default generateAction;

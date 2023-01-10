@@ -366,8 +366,7 @@ textarea {
     color: #000000;
     text-decoration: none;
     text-transform: none;
-    margin: 0;
-}
+    margin: 0;}
 
 .output-content {
     outline: none;
@@ -377,12 +376,14 @@ textarea {
     justify-content: flex-start;
     flex-shrink: 0;
     transform: none;
+    background-color: #000000;
 }
 
 .output-content p {
     text-align: left;
     white-space: pre-line;
-    color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    margin: 20px;
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {

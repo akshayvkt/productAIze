@@ -31,7 +31,7 @@ const Home = () => {
     });
   
     const data = await response.json();
-    const { output } = data;
+    const { baseOutput, output } = data;
     console.log("OpenAI replied...", output.text)
   
     setApiOutput(`${output.text}`);
@@ -62,7 +62,6 @@ const Home = () => {
         <div className="header">
           <div className="header-title">
             <h1>Prepare product documents <span className='gradient-text'>10-100x faster</span></h1>
-
             {/* next to-do: have the gradient only for '10-100x faster' */}
           </div>
           <div className="header-subtitle">
