@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 import productaizeLogo from '../assets/productAIze.png';
+// import loadAnalytics from './analytics.js';
+
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
@@ -55,6 +57,8 @@ const Home = () => {
       <Head>
         <title>productAIze</title>
       </Head>
+      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-JTC0C9YGXK"></script>
+    {loadAnalytics()} */}
       <div className='logo-container'>
       <Image src={productaizeLogo} alt="productAIze logo" />
       </div>
