@@ -17,7 +17,7 @@ const generateAction = async (req, res) => {
   console.log(`API: ${basePromptPrefix}${req.body.userInput}. \n Write ${req.body.docType} based on the above description.`)
 
   const baseCompletion = await openai.createCompletion({
-    model: 'text-davinci-003',
+    model: 'gpt-3.5-turbo',
     prompt: 
     `
     ${basePromptPrefix}${req.body.userInput}. \n Write me ${req.body.docType} based on the above description, with emphasis on the required amount of detail.
